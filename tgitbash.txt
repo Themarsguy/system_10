@@ -2,6 +2,10 @@
 SIMPLE EXAM PROJECT SETUP
 ============================
 
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+
+
 # 1. CLONE THE PROJECT
 
 git clone <your-repo-url>
@@ -384,7 +388,7 @@ function Home() {
                 <td>{product.name}</td>
                 <td>${product.price}</td>
                 <td>
-                  <Link to={`/create-product?id=${product._id || product.id}`} className="btn btn-warning me-2">Edit</Link>
+                  <Link to={`/create-product?id=${product._id || product.id}`} className="btn btn-primary me-2">Edit</Link>
                   <button className="btn btn-danger" onClick={() => handleDelete(product._id || product.id)}>Delete</button>
                 </td>
               </tr>
@@ -494,7 +498,7 @@ function CreateProduct() {
                     required
                   />
                 </div>
-                <button type="submit" className="btn btn-primary w-100">{id ? 'Update' : 'Create'} Product</button>
+                <button type="submit" className="btn btn-dark w-100">{id ? 'Update' : 'Create'} Product</button>
               </form>
             </div>
           </div>
@@ -566,7 +570,7 @@ function Login() {
                     required
                   />
                 </div>
-                <button type="submit" className="btn btn-primary w-100">Login</button>
+                <button type="submit" className="btn btn-dark w-100">Login</button>
               </form>
             </div>
           </div>
@@ -577,7 +581,6 @@ function Login() {
 }
 
 export default Login; 
-
 
 ```
 
